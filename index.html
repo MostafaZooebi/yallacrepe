@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yalla crepe</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: transparent; /* Ensure the body background is transparent */
+        }
+
+        @media only screen and (max-width: 600px) {
+            html {
+                background-image: url("crep2.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+            nav {
+                padding: 0.5em;
+                height: auto;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent gray background for nav */
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                overflow-x: auto;
+            }
+            li {
+                flex: 1;
+                text-align: center;
+                padding: 0 5px;
+                white-space: nowrap; /* Prevents line breaks */
+            }
+            a {
+                font-size: 0.9em; /* Decrease font size */
+            }
+            .logo {
+                font-size: 1.2em;
+                padding-right: 0.5em; /* Adjust padding on smaller screens */
+            }
+            .container {
+                padding: 1em;
+                border-radius: 8px; /* Rounded corners */
+                background-color: rgba(0, 0, 0, 0.6); /* Black with transparency for container */
+                backdrop-filter: none; /* Remove blur effect */
+                color: #fff; /* White text color */
+            }
+            .product {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 1em;
+                border-radius: 4px; /* Rounded corners */
+                padding: 1em;
+                background-color: rgba(0, 0, 0, 0); /* Fully transparent background for products */
+                color: #fff; /* White text color */
+            }
+            .product-name,
+            .product-price {
+                width: 100%;
+                text-align: center;
+            }
+            .product-description {
+                margin-top: 0.5em;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            html {
+                background-image: url("crep5.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+            nav {
+                height: 75px;
+                padding: 1.5em 60px;
+                background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent gray background for nav */
+            }
+            ul {
+                flex-direction: row;
+            }
+            li {
+                padding-left: 30px;
+            }
+            .logo {
+                font-size: 1.5em;
+                padding-right: 1.5em; /* Standard padding on larger screens */
+            }
+            .container {
+                padding: 2em;
+                border-radius: 8px; /* Rounded corners */
+                background-color: rgba(0, 0, 0, 0.6); /* Black with transparency for container */
+                backdrop-filter: none; /* Remove blur effect */
+                color: #fff; /* White text color */
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent gray background for nav */
+            border-bottom: 2px solid #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            white-space: nowrap; /* Ensure logo text stays on one line */
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            display: inline;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #ff9800;
+        }
+        .category-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+            color: #fff; /* White color for the title */
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 0;
+            border-bottom: 1px solid #ddd;
+            background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
+            border-radius: 4px; /* Rounded corners */
+            color: #fff; /* White text color */
+        }
+        .product-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff; /* White text for better visibility */
+        }
+        .product-price {
+            font-size: 1.2em;
+            color: #ff9800;
+        }
+        .product-description {
+            font-size: 0.9em;
+            color: #ccc; /* Light gray for description */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Yalla Crepe</div>
+        <ul>
+            <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#category"><i class="fa fa-list"></i> Category</a></li>
+            <li><a href="#contactus"><i class="fa fa-envelope"></i> Contact-Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="category-title">Category1</div>
+        <div class="product">
+            <div class="product-name">Product 1</div>
+            <div class="product-price">$10.00</div>
+            <div class="product-description">This is a brief description of Product 1.</div>
+        </div>
+        <div class="product">
+            <div class="product-name">Product 2</div>
+            <div class="product-price">$15.00</div>
+            <div class="product-description">This is a brief description of Product 2.</div>
+        </div>
+        <div class="product">
+            <div class="product-name">Product 3</div>
+            <div class="product-price">$20.00</div>
+            <div class="product-description">This is a brief description of Product 3.</div>
+        </div>
+        <div class="product">
+            <div class="product-name">Product 4</div>
+            <div class="product-price">$20.00</div>
+            <div class="product-description">This is a brief description of Product 3.</div>
+        </div>
+        <div class="product">
+            <div class="product-name">Product 5</div>
+            <div class="product-price">$20.00</div>
+            <div class="product-description">This is a brief description of Product 3.</div>
+        </div>
+        <div class="product">
+            <div class="product-name">Product 6</div>
+            <div class="product-price">$20.00</div>
+            <div class="product-description">This is a brief description of Product 3.</div>
+        </div>
+        <div class="product">
+            <div class="product-name">Product 7</div>
+            <div class="product-price">$20.00</div>
+            <div class="product-description">This is a brief description of Product 3.</div>
+        </div>
+
+        <!-- Add more products as needed -->
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
